@@ -24,6 +24,14 @@ Aplikasi ini adalah sistem manajemen inventaris sederhana yang dibangun mengguna
 - `public/`: Folder publik, tidak banyak diubah untuk proyek ini.
 - `.env`: File konfigurasi environment (tidak di-commit, gunakan `.env.example` sebagai template).
 
+### User Interface
+- UI menggunakan Bootstrap 5 (via CDN) untuk styling dasar.
+- **Halaman Utama (`/items`)**: Menampilkan tabel berisi daftar item, tombol "Create New Item", dan aksi "Show", "Edit", "Delete" per item. Ada paginasi jika item lebih dari 5.
+- **Halaman Tambah Item (`/items/create`)**: Form untuk input nama, deskripsi, kuantitas, dan harga. Validasi error ditampilkan di bawah field yang relevan.
+- **Halaman Edit Item (`/items/{id}/edit`)**: Sama seperti form tambah, tapi sudah terisi data item yang akan diedit.
+- **Halaman Detail Item (`/items/{id}`)**: Menampilkan semua detail item.
+- Pesan sukses (setelah create, update, delete) dan error validasi ditampilkan di bagian atas halaman.
+
 ## Cara Instalasi Aplikasi
 1.  **Clone repository:**
     ```bash
